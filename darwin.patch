@@ -1,0 +1,12 @@
+diff -ur postgresql-8.2.19/src/pl/plpython/Makefile postgresql-8.2.19.new/src/pl/plpython/Makefile
+--- postgresql-8.2.19/src/pl/plpython/Makefile	2010-12-14 04:03:33.000000000 +0100
++++ postgresql-8.2.19.new/src/pl/plpython/Makefile	2011-03-29 16:59:25.000000000 +0200
+@@ -24,7 +24,7 @@
+ # Darwin (OS X) has its own ideas about how to do this.
+ ifeq ($(PORTNAME), darwin)
+ shared_libpython = yes
+-override python_libspec := -framework Python
++override python_libspec := -framework Python -lpython
+ override python_additional_libs :=
+ endif
+ 
